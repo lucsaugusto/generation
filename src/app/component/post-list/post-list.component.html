@@ -1,0 +1,23 @@
+<div class="btn-group m-3" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-secondary" (click)="btnPostClick(txtInput)">Post</button>
+    <button type="button" class="btn btn-secondary" (click)="btnPostsClick()">All Posts</button>
+</div>
+
+<table class="table m-3">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">UserId</th>
+            <th scope="col">Id</th>
+            <th scope="col">Title</th>
+            <th scope="col">Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of posts">
+            <th scope="row">{{post.userId}}</th>
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+        </tr>
+    </tbody>
+</table>
